@@ -6,6 +6,8 @@ const Calculator = () => {
   const [previousInput, setPreviousInput] = useState("");
   const [operator, setOperator] = useState("");
 
+  const appendNumber = (number) => {};
+
   // Base style for all round floating buttons
   const baseButtonStyle =
     "cursor-pointer group flex h-16 w-16 items-center justify-center rounded-full text-xl font-bold text-white shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-[0_8px_15px_rgba(0,0,0,0.4)] active:translate-y-0 active:shadow-[0_2px_5px_rgba(0,0,0,0.3)]";
