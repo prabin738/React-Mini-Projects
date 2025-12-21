@@ -3,15 +3,22 @@ import LikeDislikeCounter from "./components/LikeDislikeCounter";
 import PasswordGenerator from "./components/PasswordGenerator";
 import RandomQuoteGenerator from "./components/RandomQuoteGenerator";
 import SimpleCalculator from "./components/SimpleCalculator";
+import Navbar from "./todolist/components/Navbar";
+import ToDoList from "./todolist/ToDoList";
 
 const App = () => {
   return (
-    <div>
-      {/* <LikeDislikeCounter /> */}
-      {/* <PasswordGenerator /> */}
-      {/* <RandomQuoteGenerator /> */}
-      <SimpleCalculator />
-    </div>
+    <>
+      <Navbar />
+      <div>
+        {/* <LikeDislikeCounter /> */}
+        {/* <PasswordGenerator /> */}
+        {/* <RandomQuoteGenerator /> */}
+        {/* <SimpleCalculator /> */}
+
+        <ToDoList />
+      </div>
+    </>
   );
 };
 
