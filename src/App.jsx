@@ -14,13 +14,13 @@ const App = () => {
       {/* <Navbar /> */}
       <div>
         {/* <LikeDislikeCounter /> */}
-        {/* <PasswordGenerator /> */}
+        <PasswordGenerator />
         {/* <RandomQuoteGenerator /> */}
         {/* <SimpleCalculator /> */}
         {/* <NeonRunner /> */}
         {/* <ToDoList /> */}
 
-        <GradientGenerator />
+        {/* <GradientGenerator /> */}
       </div>
     </>
   );

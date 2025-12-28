@@ -1,10 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 // We don't need toast imports yet since that is "logic"
 
 const GradientGenerator = () => {
   // ---------------------------------------------------------
   // 🧠 LOGIC ZONE: This is where you will add your state later
   // ---------------------------------------------------------
+  const [count, setCount] = useState(12);
+  const [type, setType] = useState("linear");
+  const [gradientList, setGradientList] = useState([]);
+
+  const getHexColorCode = () => {
+    const colorCombination = Math.floor(Math.random() * 255 * 255 * 255);
+
+    const colorHex = colorCombination.toString(16).padStart(6, "0");
+    // alert(colorHex);
+    return `#${colorHex}`;
+    // alert(colorHex);
+  };
+
+  const generateGradient = () => {
+    const colors = [];
+
+    for (let i = 0; i < count; i++) {
+      const color1 = getHexColorCode();
+      const color2 = getHexColorCode();
+      const degree = Math.floor(Math.random() * 360);
+      //   console.log(degree, color1, color2);
+      const degreeString = `${degree}deg`;
+      if (type === "linear") {
+        colors.push({
+          gradient: `linear-gradient(${degreeString}, ${color1}, ${color2})`,
+          css: `background: 'linear-gradient(${degreeString}, ${color1}, ${color2})`,
+        });
+      } else {
+        colors.push({
+          gradient: `radial-gradient(circle, ${color1}, ${color2})`,
+          css: `background: 'radial-gradient(circle, ${color1}, ${color2})'`,
+        });
+      }
+    }
+
+    setGradientList(colors);
+  };
 
   return (
     // 1. Main Container: Full height, white background
@@ -39,7 +76,10 @@ const GradientGenerator = () => {
             </select>
 
             {/* Generate Button */}
-            <button className="px-16 py-2 bg-rose-500 text-white rounded font-medium cursor-pointer hover:bg-rose-600 transition">
+            <button
+              onClick={generateGradient}
+              className="px-16 py-2 bg-rose-500 text-white rounded font-medium cursor-pointer hover:bg-rose-600 transition"
+            >
               Generate
             </button>
           </div>
