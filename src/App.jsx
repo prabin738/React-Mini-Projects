@@ -7,6 +7,7 @@ import Navbar from "./todolist/components/Navbar";
 import ToDoList from "./todolist/ToDoList";
 import NeonRunner from "./components/NeonRunner";
 import GradientGenerator from "./components/GradientGenerator";
+import WeatherApp from "./components/WeatherApp";
 
 const App = () => {
   return (
@@ -14,13 +15,15 @@ const App = () => {
       {/* <Navbar /> */}
       <div>
         {/* <LikeDislikeCounter /> */}
-        <PasswordGenerator />
+        {/* <PasswordGenerator /> */}
         {/* <RandomQuoteGenerator /> */}
         {/* <SimpleCalculator /> */}
         {/* <NeonRunner /> */}
         {/* <ToDoList /> */}
 
         {/* <GradientGenerator /> */}
+
+        <WeatherApp />
       </div>
     </>
   );
