@@ -20,7 +20,6 @@ const App = () => {
         {/* <SimpleCalculator /> */}
         {/* <NeonRunner /> */}
         {/* <ToDoList /> */}
-
         {/* <GradientGenerator /> */}
 
         <WeatherApp />
