@@ -1,0 +1,35 @@
+import React, { useState } from "react";
+
+const SearchBar = ({ fetchWeather }) => {
+  const [city, setCity] = useState("");
+  //   alert(city);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (city.trim()) {
+      fetchWeather(city);
+      setCity("");
+    }
+  };
+
+  return (
+    <form className="flex" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        placeholder="Enter City Name"
+        className="flex-1 p-2 border border-gray-300 rounded-l-lg outline-none border-r-0"
+      />
+      <button
+        type="submit"
+        className="bg-blue-500 border cursor-pointer p-2 hover:bg-blue-600 border-l-0 rounded-r-lg font-semibold"
+      >
+        Search
+      </button>
+    </form>
+  );
+};
+
+export default SearchBar;

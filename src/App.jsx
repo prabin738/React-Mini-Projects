@@ -1,13 +1,14 @@
 import React from "react";
-import LikeDislikeCounter from "./components/LikeDislikeCounter";
-import PasswordGenerator from "./components/PasswordGenerator";
-import RandomQuoteGenerator from "./components/RandomQuoteGenerator";
-import SimpleCalculator from "./components/SimpleCalculator";
+import LikeDislikeCounter from "./apps/LikeDislikeCounter";
+import PasswordGenerator from "./apps/PasswordGenerator";
+import RandomQuoteGenerator from "./apps/RandomQuoteGenerator";
+import SimpleCalculator from "./apps/SimpleCalculator";
 import Navbar from "./todolist/components/Navbar";
 import ToDoList from "./todolist/ToDoList";
-import NeonRunner from "./components/NeonRunner";
-import GradientGenerator from "./components/GradientGenerator";
-import WeatherApp from "./components/WeatherApp";
+import NeonRunner from "./apps/NeonRunner";
+import GradientGenerator from "./apps/GradientGenerator";
+import WeatherApp from "./apps/WeatherApp";
+import BackgroundColorChanger from "./apps/BackgroundColorChanger";
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
         {/* <ToDoList /> */}
         {/* <GradientGenerator /> */}
 
-        <WeatherApp />
+        {/* <WeatherApp /> */}
+        <BackgroundColorChanger />
       </div>
     </>
   );
