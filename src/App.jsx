@@ -15,7 +15,7 @@ const App = () => {
     <>
       {/* <Navbar /> */}
       <div>
-        {/* <LikeDislikeCounter /> */}
+        <LikeDislikeCounter />
         {/* <PasswordGenerator /> */}
         {/* <RandomQuoteGenerator /> */}
         {/* <SimpleCalculator /> */}
