@@ -11,11 +11,14 @@ import WeatherApp from "./apps/WeatherApp";
 import BackgroundColorChanger from "./apps/BackgroundColorChanger";
 
 const App = () => {
+  let price = "$50";
+  let euro = price.replace("$", "EUR");
+  alert(euro);
   return (
     <>
       {/* <Navbar /> */}
       <div>
-        <LikeDislikeCounter />
+        {/* <LikeDislikeCounter /> */}
         {/* <PasswordGenerator /> */}
         {/* <RandomQuoteGenerator /> */}
         {/* <SimpleCalculator /> */}
@@ -24,7 +27,7 @@ const App = () => {
         {/* <GradientGenerator /> */}
 
         {/* <WeatherApp /> */}
-        <BackgroundColorChanger />
+        {/* <BackgroundColorChanger /> */}
       </div>
     </>
   );
